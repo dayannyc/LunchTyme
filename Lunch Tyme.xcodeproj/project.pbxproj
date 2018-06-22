@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0420A1A665C7111184440708 /* Pods_Lunch_Tyme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7959D2BE5EB8190136B2506 /* Pods_Lunch_Tyme.framework */; };
 		8D355B7D20CEF6D900A532EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D355B7C20CEF6D900A532EC /* AppDelegate.swift */; };
 		8D355B8220CEF6D900A532EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D355B8020CEF6D900A532EC /* Main.storyboard */; };
 		8D355B8420CEF6D900A532EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D355B8320CEF6D900A532EC /* Assets.xcassets */; };
@@ -18,9 +19,11 @@
 		8D355BDB20D1B32900A532EC /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D355BDA20D1B32900A532EC /* Restaurants.swift */; };
 		8D355BDF20D3721200A532EC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D355BDE20D3721200A532EC /* MapViewController.swift */; };
 		8D355BE120D3FC0500A532EC /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D355BE020D3FC0500A532EC /* NavViewController.swift */; };
+		8D98505E20DD327D00F37598 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D98505D20DD327D00F37598 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F6A1C3F43E2BBCCDB0C860C /* Pods-Lunch Tyme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Tyme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme.release.xcconfig"; sourceTree = "<group>"; };
 		8D355B7920CEF6D900A532EC /* Lunch Tyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Tyme.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D355B7C20CEF6D900A532EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D355B8120CEF6D900A532EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,10 @@
 		8D355BDA20D1B32900A532EC /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
 		8D355BDE20D3721200A532EC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8D355BE020D3FC0500A532EC /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		8D98505D20DD327D00F37598 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8D98505F20DD36F300F37598 /* Lunch Tyme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Lunch Tyme.entitlements"; sourceTree = "<group>"; };
+		BE6DB1E1E3E8C56068EF7326 /* Pods-Lunch Tyme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Tyme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme.debug.xcconfig"; sourceTree = "<group>"; };
+		E7959D2BE5EB8190136B2506 /* Pods_Lunch_Tyme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lunch_Tyme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +48,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0420A1A665C7111184440708 /* Pods_Lunch_Tyme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8062B6DEE8EDD128A3D24E1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE6DB1E1E3E8C56068EF7326 /* Pods-Lunch Tyme.debug.xcconfig */,
+				7F6A1C3F43E2BBCCDB0C860C /* Pods-Lunch Tyme.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8D355B7020CEF6D900A532EC = {
 			isa = PBXGroup;
 			children = (
 				8D355B7B20CEF6D900A532EC /* Lunch Tyme */,
 				8D355B7A20CEF6D900A532EC /* Products */,
+				8062B6DEE8EDD128A3D24E1E /* Pods */,
+				C4AFB805174A02D7D601472D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +85,7 @@
 		8D355B7B20CEF6D900A532EC /* Lunch Tyme */ = {
 			isa = PBXGroup;
 			children = (
+				8D98505F20DD36F300F37598 /* Lunch Tyme.entitlements */,
 				8D355B7C20CEF6D900A532EC /* AppDelegate.swift */,
 				8D355B9420CF0F1100A532EC /* RestaurantsViewController.swift */,
 				8D355BD620D19FC400A532EC /* RestaurantCollectionViewCell.swift */,
@@ -77,9 +97,18 @@
 				8D355B8020CEF6D900A532EC /* Main.storyboard */,
 				8D355B8320CEF6D900A532EC /* Assets.xcassets */,
 				8D355B8520CEF6D900A532EC /* LaunchScreen.storyboard */,
+				8D98505D20DD327D00F37598 /* GoogleService-Info.plist */,
 				8D355B8820CEF6D900A532EC /* Info.plist */,
 			);
 			path = "Lunch Tyme";
+			sourceTree = "<group>";
+		};
+		C4AFB805174A02D7D601472D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7959D2BE5EB8190136B2506 /* Pods_Lunch_Tyme.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D355B8B20CEF6D900A532EC /* Build configuration list for PBXNativeTarget "Lunch Tyme" */;
 			buildPhases = (
+				D5559E78704755F43D88E959 /* [CP] Check Pods Manifest.lock */,
 				8D355B7520CEF6D900A532EC /* Sources */,
 				8D355B7620CEF6D900A532EC /* Frameworks */,
 				8D355B7720CEF6D900A532EC /* Resources */,
+				4CF9C22A18A2A9618526529E /* [CP] Embed Pods Frameworks */,
+				63C4BA034CD305E7A4721DA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -115,6 +147,11 @@
 					8D355B7820CEF6D900A532EC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -142,12 +179,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D355B8720CEF6D900A532EC /* LaunchScreen.storyboard in Resources */,
+				8D98505E20DD327D00F37598 /* GoogleService-Info.plist in Resources */,
 				8D355B8420CEF6D900A532EC /* Assets.xcassets in Resources */,
 				8D355B8220CEF6D900A532EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CF9C22A18A2A9618526529E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63C4BA034CD305E7A4721DA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5559E78704755F43D88E959 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lunch Tyme-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D355B7520CEF6D900A532EC /* Sources */ = {
@@ -296,8 +390,10 @@
 		};
 		8D355B8C20CEF6D900A532EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE6DB1E1E3E8C56068EF7326 /* Pods-Lunch Tyme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Lunch Tyme/Lunch Tyme.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2RSH5TP5SQ;
 				INFOPLIST_FILE = "Lunch Tyme/Info.plist";
@@ -311,8 +407,10 @@
 		};
 		8D355B8D20CEF6D900A532EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F6A1C3F43E2BBCCDB0C860C /* Pods-Lunch Tyme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Lunch Tyme/Lunch Tyme.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2RSH5TP5SQ;
 				INFOPLIST_FILE = "Lunch Tyme/Info.plist";
