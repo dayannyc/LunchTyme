@@ -13,11 +13,11 @@ class InternetViewController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
-    
+    var urlStr = "http://www.citi.com"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myURL = URL(string:"http://www.citi.com")
+        let myURL = URL(string:urlStr)
         let myRequest = URLRequest(url: myURL!)
         webView?.load(myRequest)
         webView?.navigationDelegate = self

@@ -78,7 +78,15 @@ class DetailsViewController: UIViewController {
         if segue.identifier == "detailsMapSeg" {
             let seg = segue.destination as! MapViewController
             seg.restaurantArr = restaurantArr
-        } 
+        } else if segue.identifier == "detailsInternetSeg" {
+            let seg = segue.destination as! InternetViewController
+            
+            // send this restaurant's twitter website to internet VC
+            let url:String = (currRestaurant?.contact?.twitter)!
+            let destURLStr = "http://twitter.com/\(url)"
+            seg.urlStr = destURLStr
+        }
+
     }
 
 }
