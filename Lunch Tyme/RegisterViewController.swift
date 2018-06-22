@@ -16,6 +16,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        email.placeholder = "Email"
+        password.placeholder = "Password"
     }
 
     override func didReceiveMemoryWarning() {
