@@ -12,6 +12,8 @@ import WebKit
 class InternetViewController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,13 @@ class InternetViewController: UIViewController, WKNavigationDelegate {
         let myRequest = URLRequest(url: myURL!)
         webView?.load(myRequest)
         webView?.navigationDelegate = self
+        
+        loadingActivity.startAnimating()
+        loadingActivity.hidesWhenStopped = true
+    }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        loadingActivity.stopAnimating()
     }
     
     @IBAction func webBackBttn(_ sender: Any) {

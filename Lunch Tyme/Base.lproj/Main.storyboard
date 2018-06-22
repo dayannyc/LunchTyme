@@ -63,6 +63,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.2627450980392157" green="0.90980392156862744" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fbC-Ou-mbz">
+                                <rect key="frame" x="169" y="319" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.2627450980392157" green="0.90980392156862744" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -80,6 +85,7 @@
                     <tabBarItem key="tabBarItem" title="internets" image="tab_internets" id="UL6-CC-nhb"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="loadingActivity" destination="fbC-Ou-mbz" id="LsX-I1-pOv"/>
                         <outlet property="webView" destination="OsW-PF-e6j" id="Kne-7A-ZN9"/>
                     </connections>
                 </viewController>
