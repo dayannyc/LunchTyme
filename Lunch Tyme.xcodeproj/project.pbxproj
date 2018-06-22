@@ -20,6 +20,8 @@
 		8D355BDF20D3721200A532EC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D355BDE20D3721200A532EC /* MapViewController.swift */; };
 		8D355BE120D3FC0500A532EC /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D355BE020D3FC0500A532EC /* NavViewController.swift */; };
 		8D98505E20DD327D00F37598 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D98505D20DD327D00F37598 /* GoogleService-Info.plist */; };
+		8D98506120DD40F900F37598 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506020DD40F900F37598 /* LoginViewController.swift */; };
+		8D98506320DD410600F37598 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506220DD410600F37598 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		8D355BE020D3FC0500A532EC /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		8D98505D20DD327D00F37598 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D98505F20DD36F300F37598 /* Lunch Tyme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Lunch Tyme.entitlements"; sourceTree = "<group>"; };
+		8D98506020DD40F900F37598 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8D98506220DD410600F37598 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BE6DB1E1E3E8C56068EF7326 /* Pods-Lunch Tyme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Tyme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme.debug.xcconfig"; sourceTree = "<group>"; };
 		E7959D2BE5EB8190136B2506 /* Pods_Lunch_Tyme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lunch_Tyme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +91,8 @@
 			children = (
 				8D98505F20DD36F300F37598 /* Lunch Tyme.entitlements */,
 				8D355B7C20CEF6D900A532EC /* AppDelegate.swift */,
+				8D98506020DD40F900F37598 /* LoginViewController.swift */,
+				8D98506220DD410600F37598 /* RegisterViewController.swift */,
 				8D355B9420CF0F1100A532EC /* RestaurantsViewController.swift */,
 				8D355BD620D19FC400A532EC /* RestaurantCollectionViewCell.swift */,
 				8D355BDA20D1B32900A532EC /* Restaurants.swift */,
@@ -195,11 +201,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -248,6 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D98506120DD40F900F37598 /* LoginViewController.swift in Sources */,
+				8D98506320DD410600F37598 /* RegisterViewController.swift in Sources */,
 				8D355B9520CF0F1100A532EC /* RestaurantsViewController.swift in Sources */,
 				8D355B7D20CEF6D900A532EC /* AppDelegate.swift in Sources */,
 				8D355BD720D19FC400A532EC /* RestaurantCollectionViewCell.swift in Sources */,

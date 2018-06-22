@@ -60,6 +60,12 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource  {
         return 1
     }
     
+    @IBAction func logoutBttn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialVC = storyboard.instantiateViewController(withIdentifier: "initialScreen") as! LoginViewController
+        self.present(initialVC, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // pass correct information to the view controller that the segue that chosen goes to
         if segue.identifier == "listMapSeg" {

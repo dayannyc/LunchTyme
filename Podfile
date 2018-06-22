@@ -7,4 +7,5 @@ target 'Lunch Tyme' do
 
   # Pods for Lunch Tyme
 	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
 end
