@@ -20,10 +20,10 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
         name.text = currRestaurant.name
         category.text = currRestaurant.category
         
-        
+        // image in cache already so just get it
         if cache.object(forKey: currRestaurant.name! as NSString) != nil {
             restaurantImg.image = cache.object(forKey: currRestaurant.name! as NSString)
-        } else {
+        } else { // get image from imageURL then store in cache
             let imageUrl:URL = URL(string: currRestaurant.backgroundImageURL!)!
             let request = URLRequest(url: imageUrl)
             let mainQueue = OperationQueue.main
@@ -31,11 +31,10 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
                 if error == nil {
                     // Convert the downloaded data in to a UIImage object
                     let image = UIImage(data: data!)
-                    // Store the image in to our cache
+                    // Store the image in cache
                     cache.setObject(image!, forKey: currRestaurant.name! as NSString)
                     // Update the cell
                     self.restaurantImg.image = image
-
                 }
             })
         }
