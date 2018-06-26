@@ -52,7 +52,7 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantCollectionViewCell
-        cell.updateInfo(restaurantList: restaurantArr, index: indexPath[0], cache:imageCache)
+        cell.updateInfo(restaurantList: restaurantArr, index: indexPath[0], cache:imageCache, imageUrl: restaurantArr[indexPath[0]].backgroundImageURL)
         return cell
     }
     

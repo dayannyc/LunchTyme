@@ -9,3 +9,8 @@ target 'Lunch Tyme' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
 end
+
+target 'Lunch TymeTests' do
+	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
+end

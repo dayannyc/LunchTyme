@@ -22,9 +22,22 @@
 		8D98505E20DD327D00F37598 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D98505D20DD327D00F37598 /* GoogleService-Info.plist */; };
 		8D98506120DD40F900F37598 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506020DD40F900F37598 /* LoginViewController.swift */; };
 		8D98506320DD410600F37598 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506220DD410600F37598 /* RegisterViewController.swift */; };
+		8D98506B20E12FAB00F37598 /* Lunch_TymeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506A20E12FAB00F37598 /* Lunch_TymeTests.swift */; };
+		98144BE3BDFF455D2809B9C2 /* libPods-Lunch TymeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B37058D849D1491491605C7A /* libPods-Lunch TymeTests.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8D98506D20E12FAB00F37598 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D355B7120CEF6D900A532EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D355B7820CEF6D900A532EC;
+			remoteInfo = "Lunch Tyme";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0AA02B2CFC4125C06875D369 /* Pods-Lunch TymeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch TymeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lunch TymeTests/Pods-Lunch TymeTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F6A1C3F43E2BBCCDB0C860C /* Pods-Lunch Tyme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Tyme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme.release.xcconfig"; sourceTree = "<group>"; };
 		8D355B7920CEF6D900A532EC /* Lunch Tyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Tyme.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D355B7C20CEF6D900A532EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +56,12 @@
 		8D98505F20DD36F300F37598 /* Lunch Tyme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Lunch Tyme.entitlements"; sourceTree = "<group>"; };
 		8D98506020DD40F900F37598 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8D98506220DD410600F37598 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8D98506820E12FAA00F37598 /* Lunch TymeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lunch TymeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D98506A20E12FAB00F37598 /* Lunch_TymeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunch_TymeTests.swift; sourceTree = "<group>"; };
+		8D98506C20E12FAB00F37598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B37058D849D1491491605C7A /* libPods-Lunch TymeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lunch TymeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6DB1E1E3E8C56068EF7326 /* Pods-Lunch Tyme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Tyme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme.debug.xcconfig"; sourceTree = "<group>"; };
+		D1B6E89DAFF219308F34D913 /* Pods-Lunch TymeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch TymeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lunch TymeTests/Pods-Lunch TymeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E7959D2BE5EB8190136B2506 /* Pods_Lunch_Tyme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lunch_Tyme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,6 +74,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D98506520E12FAA00F37598 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98144BE3BDFF455D2809B9C2 /* libPods-Lunch TymeTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +90,8 @@
 			children = (
 				BE6DB1E1E3E8C56068EF7326 /* Pods-Lunch Tyme.debug.xcconfig */,
 				7F6A1C3F43E2BBCCDB0C860C /* Pods-Lunch Tyme.release.xcconfig */,
+				D1B6E89DAFF219308F34D913 /* Pods-Lunch TymeTests.debug.xcconfig */,
+				0AA02B2CFC4125C06875D369 /* Pods-Lunch TymeTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -72,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8D355B7B20CEF6D900A532EC /* Lunch Tyme */,
+				8D98506920E12FAB00F37598 /* Lunch TymeTests */,
 				8D355B7A20CEF6D900A532EC /* Products */,
 				8062B6DEE8EDD128A3D24E1E /* Pods */,
 				C4AFB805174A02D7D601472D /* Frameworks */,
@@ -82,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				8D355B7920CEF6D900A532EC /* Lunch Tyme.app */,
+				8D98506820E12FAA00F37598 /* Lunch TymeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,10 +139,20 @@
 			path = "Lunch Tyme";
 			sourceTree = "<group>";
 		};
+		8D98506920E12FAB00F37598 /* Lunch TymeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D98506A20E12FAB00F37598 /* Lunch_TymeTests.swift */,
+				8D98506C20E12FAB00F37598 /* Info.plist */,
+			);
+			path = "Lunch TymeTests";
+			sourceTree = "<group>";
+		};
 		C4AFB805174A02D7D601472D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				E7959D2BE5EB8190136B2506 /* Pods_Lunch_Tyme.framework */,
+				B37058D849D1491491605C7A /* libPods-Lunch TymeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +180,27 @@
 			productReference = 8D355B7920CEF6D900A532EC /* Lunch Tyme.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8D98506720E12FAA00F37598 /* Lunch TymeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D98507120E12FAB00F37598 /* Build configuration list for PBXNativeTarget "Lunch TymeTests" */;
+			buildPhases = (
+				1C1B885439509F2C602D2384 /* [CP] Check Pods Manifest.lock */,
+				8D98506420E12FAA00F37598 /* Sources */,
+				8D98506520E12FAA00F37598 /* Frameworks */,
+				8D98506620E12FAA00F37598 /* Resources */,
+				091845FC1FE85C26D8D76313 /* [CP] Embed Pods Frameworks */,
+				6D3CAB249092916CFE2A81ED /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D98506E20E12FAB00F37598 /* PBXTargetDependency */,
+			);
+			name = "Lunch TymeTests";
+			productName = "Lunch TymeTests";
+			productReference = 8D98506820E12FAA00F37598 /* Lunch TymeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -159,6 +220,11 @@
 							};
 						};
 					};
+					8D98506720E12FAA00F37598 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8D355B7820CEF6D900A532EC;
+					};
 				};
 			};
 			buildConfigurationList = 8D355B7420CEF6D900A532EC /* Build configuration list for PBXProject "Lunch Tyme" */;
@@ -175,6 +241,7 @@
 			projectRoot = "";
 			targets = (
 				8D355B7820CEF6D900A532EC /* Lunch Tyme */,
+				8D98506720E12FAA00F37598 /* Lunch TymeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,9 +258,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D98506620E12FAA00F37598 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		091845FC1FE85C26D8D76313 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lunch TymeTests/Pods-Lunch TymeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C1B885439509F2C602D2384 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lunch TymeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4CF9C22A18A2A9618526529E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,9 +308,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-framework/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-framework/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb-framework/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -229,6 +336,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D3CAB249092916CFE2A81ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lunch TymeTests/Pods-Lunch TymeTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D5559E78704755F43D88E959 /* [CP] Check Pods Manifest.lock */ = {
@@ -269,7 +391,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D98506420E12FAA00F37598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D98506B20E12FAB00F37598 /* Lunch_TymeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D98506E20E12FAB00F37598 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D355B7820CEF6D900A532EC /* Lunch Tyme */;
+			targetProxy = 8D98506D20E12FAB00F37598 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8D355B8020CEF6D900A532EC /* Main.storyboard */ = {
@@ -432,6 +570,38 @@
 			};
 			name = Release;
 		};
+		8D98506F20E12FAB00F37598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1B6E89DAFF219308F34D913 /* Pods-Lunch TymeTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Lunch TymeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dayannyc.Lunch-TymeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lunch Tyme.app/Lunch Tyme";
+			};
+			name = Debug;
+		};
+		8D98507020E12FAB00F37598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AA02B2CFC4125C06875D369 /* Pods-Lunch TymeTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Lunch TymeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dayannyc.Lunch-TymeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lunch Tyme.app/Lunch Tyme";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -449,6 +619,15 @@
 			buildConfigurations = (
 				8D355B8C20CEF6D900A532EC /* Debug */,
 				8D355B8D20CEF6D900A532EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D98507120E12FAB00F37598 /* Build configuration list for PBXNativeTarget "Lunch TymeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D98506F20E12FAB00F37598 /* Debug */,
+				8D98507020E12FAB00F37598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
