@@ -14,11 +14,13 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    var loginPresenter: LoginPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         email.placeholder = "Email"
         password.placeholder = "Password"
+        self.loginPresenter = LoginPresenter(view: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,16 +28,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBttn(_ sender: Any) {
-        Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
-            if (error == nil) {
-                // successfully signed in so take user to the restaurant list
-                print("User has successfully logged in")
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let sVC = storyboard.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
-                self.present(sVC!, animated: true, completion: nil)
-            } else {
-                print("Error occured while logging in")
-            }
-        }
+        loginPresenter?.register(email: email.text!, password: password.text!)
     }
 }

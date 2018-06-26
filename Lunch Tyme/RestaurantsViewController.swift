@@ -64,7 +64,6 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
                     self.categories.append(restaurant.category!)
                 }
             }
-            print(self.categories.count , " COUNT IS ****")
             
             DispatchQueue.main.async {
                 self.makePicker()
