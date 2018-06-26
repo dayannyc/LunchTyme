@@ -11,12 +11,16 @@ import FirebaseAuth
 
 class RegistrationPresenter {
     private var registrationView: RegisterViewController?
+    var error = ""
     
     init(view: RegisterViewController) {
         registrationView =  view
     }
     
     func register(email: String, password: String) {
+        if(password.isEmpty) {
+            self.error = "Password field cannot be left blank"
+        }
         Auth.auth().createUser(withEmail: email, password: password) { user, error in
             if error == nil {
                 // if user account created successfully, sign them in

@@ -11,16 +11,20 @@ import FirebaseAuth
 
 class LoginPresenter {
     private var loginView: LoginViewController?
+    var error = ""
     
     init(view: LoginViewController) {
         loginView =  view
     }
     
-    func register(email: String, password: String) {
+    func login(email: String, password: String) {
+        if email.isEmpty {
+            self.error = "Email field cannot be left blank"
+        }
+        
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if (error == nil) {
                 // successfully signed in so take user to the restaurant list
-                print("User has successfully logged in")
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let sVC = storyboard.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
                 self.loginView?.present(sVC!, animated: true, completion: nil)

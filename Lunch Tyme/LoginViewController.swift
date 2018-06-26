@@ -28,6 +28,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBttn(_ sender: Any) {
-        loginPresenter?.register(email: email.text!, password: password.text!)
+        loginPresenter?.login(email: email.text!, password: password.text!)
     }
 }

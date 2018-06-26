@@ -21,6 +21,7 @@
 		8D355BE120D3FC0500A532EC /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D355BE020D3FC0500A532EC /* NavViewController.swift */; };
 		8D72E55420E29FB600D65A04 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72E55320E29FB600D65A04 /* RegistrationPresenter.swift */; };
 		8D72E55620E2A45E00D65A04 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72E55520E2A45E00D65A04 /* LoginPresenter.swift */; };
+		8D72E55820E2C45700D65A04 /* RestaurantPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72E55720E2C45700D65A04 /* RestaurantPresenter.swift */; };
 		8D98505E20DD327D00F37598 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D98505D20DD327D00F37598 /* GoogleService-Info.plist */; };
 		8D98506120DD40F900F37598 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506020DD40F900F37598 /* LoginViewController.swift */; };
 		8D98506320DD410600F37598 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506220DD410600F37598 /* RegisterViewController.swift */; };
@@ -58,6 +59,7 @@
 		8D355BE020D3FC0500A532EC /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		8D72E55320E29FB600D65A04 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		8D72E55520E2A45E00D65A04 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		8D72E55720E2C45700D65A04 /* RestaurantPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPresenter.swift; sourceTree = "<group>"; };
 		8D98505D20DD327D00F37598 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D98505F20DD36F300F37598 /* Lunch Tyme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Lunch Tyme.entitlements"; sourceTree = "<group>"; };
 		8D98506020DD40F900F37598 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				8D72E55320E29FB600D65A04 /* RegistrationPresenter.swift */,
 				8D72E55520E2A45E00D65A04 /* LoginPresenter.swift */,
+				8D72E55720E2C45700D65A04 /* RestaurantPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				8D355B9720CF100300A532EC /* DetailsViewController.swift in Sources */,
 				8D72E55420E29FB600D65A04 /* RegistrationPresenter.swift in Sources */,
 				8D355B9920D0075C00A532EC /* InternetViewController.swift in Sources */,
+				8D72E55820E2C45700D65A04 /* RestaurantPresenter.swift in Sources */,
 				8D355BDB20D1B32900A532EC /* Restaurants.swift in Sources */,
 				8DD7D87120E27E2D009E90FE /* ListLayout.swift in Sources */,
 				8D355BDF20D3721200A532EC /* MapViewController.swift in Sources */,

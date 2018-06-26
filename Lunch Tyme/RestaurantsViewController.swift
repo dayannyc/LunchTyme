@@ -18,44 +18,13 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
     var btnConfirm:UIButton = UIButton()
     var btnCancel:UIButton = UIButton()
     var categories = [String]()
-    
-    var listLayout:ListLayout!
-    var gridLayout:GridLayout!
-    
+    var restaurantPresenter: RestaurantPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        listLayout = ListLayout()
-        gridLayout = GridLayout()
-        collectionView.collectionViewLayout = listLayout
         
-//        // parsing data from jSON url and store them in models
-//        let jsonURL = URL(string: "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/restaurants.json")
-//        let myRequest = URLRequest(url: jsonURL!)
-//
-//        URLSession.shared.dataTask(with: myRequest) { (data, response
-//            , error) in
-//            guard let data = data else { return }
-//            do {
-//                let decoder = JSONDecoder()
-//                let rData = try decoder.decode(AllRestaurants.self, from: data)
-//                self.restaurantArr = rData.restaurants
-//
-//                for restaurant in rData.restaurants {
-//                    if self.categories.contains(restaurant.category!) == false {
-//                        self.categories.append(restaurant.category!)
-//                    }
-//                }
-//                if (self.restaurantArr.count) > 0 {
-//                    DispatchQueue.main.async {
-//                        self.collectionView.reloadData()
-//                    }
-//                }
-//
-//            } catch let err {
-//                print("Err", err)
-//            }
-//            }.resume()
+        restaurantPresenter = RestaurantPresenter(view: self)
+
         getRestaurants { (dataArray) in
             self.tempRestaurantArr = dataArray
             self.allRestaurantArr = dataArray
@@ -103,42 +72,24 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func makePicker() {
-        // instantiates UIPickerView
-        picker.isHidden = true
-        picker.dataSource = self
-        picker.delegate = self
-        self.view.addSubview(picker)
-        self.picker.frame = CGRect(x: 0, y: view.frame.maxY/15, width: view.frame.width, height: view.frame.height/6)
-        self.picker.backgroundColor = UIColor.white
-        self.picker.layer.borderColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0).cgColor
-        self.picker.layer.borderWidth = 0.70
-        
+        restaurantPresenter?.makePicker()
         makePickerButton(button:btnConfirm, xVal:view.frame.minX, btnColor:UIColor.black, btnTitle:"Confirm", btnAc:#selector(confirmBttn))
         makePickerButton(button:btnCancel, xVal:view.frame.width/2, btnColor:UIColor.red, btnTitle: "Cancel", btnAc:#selector(cancelBttn))
     }
     
-    
-    @IBAction func resetBttn(_ sender: Any) {
-        tempRestaurantArr = allRestaurantArr
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
-        print("RESET")
+    // creates a button inside of the picker
+    func makePickerButton(button:UIButton, xVal:CGFloat, btnColor:UIColor, btnTitle:String, btnAc:Selector) {
+        button.isHidden = true
+        button.frame = CGRect(x: xVal, y: (view.frame.height/6)+45, width: view.frame.width/2, height: 25)
+        button.backgroundColor = UIColor.white
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.black.cgColor
+        button.setTitleColor(btnColor, for: .normal)
+        button.setTitle(btnTitle, for: .normal)
+        button.addTarget(self, action: btnAc, for: .touchUpInside)
+        button.layer.borderColor = UIColor.black.cgColor
+        self.view.addSubview(button)
     }
-    @IBAction func gridBttn(_ sender: Any) {
-        UIView.animate(withDuration: 0.1) {
-            self.collectionView.collectionViewLayout.invalidateLayout()
-            self.collectionView.setCollectionViewLayout(self.gridLayout, animated: false)
-        }
-    }
-    
-    @IBAction func listBttn(_ sender: Any) {
-        UIView.animate(withDuration: 0.1) {
-            self.collectionView.collectionViewLayout.invalidateLayout()
-            self.collectionView.setCollectionViewLayout(self.listLayout, animated: false)
-        }
-    }
-    
     
     @objc func cancelBttn(sender: UIButton!) {
         btnConfirm.isHidden = true
@@ -176,27 +127,29 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
         return categories[row]
     }
     
-    // creates a button inside of the picker
-    func makePickerButton(button:UIButton, xVal:CGFloat, btnColor:UIColor, btnTitle:String, btnAc:Selector) {
-        button.isHidden = true
-        button.frame = CGRect(x: xVal, y: (view.frame.height/6)+45, width: view.frame.width/2, height: 25)
-        button.backgroundColor = UIColor.white
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.black.cgColor
-        button.setTitleColor(btnColor, for: .normal)
-        button.setTitle(btnTitle, for: .normal)
-        button.addTarget(self, action: btnAc, for: .touchUpInside)
-        button.layer.borderColor = UIColor.black.cgColor
-        self.view.addSubview(button)
+    @IBAction func resetBttn(_ sender: Any) {
+        tempRestaurantArr = allRestaurantArr
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    @IBAction func gridBttn(_ sender: Any) {
+        UIView.animate(withDuration: 0.1) {
+            self.collectionView.collectionViewLayout.invalidateLayout()
+            self.collectionView.setCollectionViewLayout((self.restaurantPresenter?.gridLayout)!, animated: false)
+        }
+    }
+    
+    @IBAction func listBttn(_ sender: Any) {
+        UIView.animate(withDuration: 0.1) {
+            self.collectionView.collectionViewLayout.invalidateLayout()
+            self.collectionView.setCollectionViewLayout((self.restaurantPresenter?.listLayout)!, animated: false)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return tempRestaurantArr.count
-//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantCollectionViewCell

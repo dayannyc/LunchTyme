@@ -11,24 +11,40 @@ import XCTest
 
 class Lunch_TymeTests: XCTestCase {
     
-    var resPage: RestaurantsViewController!
+    var loginVC: LoginViewController!
+    var registerVC: RegisterViewController!
     
     override func setUp() {
         super.setUp()
-        let resPage = RestaurantsViewController()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let lVC = storyboard.instantiateViewController(withIdentifier: "initialScreen") as! LoginViewController
+        let rVC = storyboard.instantiateViewController(withIdentifier: "registerVC") as! RegisterViewController
+        loginVC = lVC
+        registerVC = rVC
+        _ = loginVC.view
+        _ = registerVC.view
+        
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        resPage = nil
+        loginVC = nil
+        registerVC = nil
         super.tearDown()
 
     }
     
-    func testGettingRestaurants() {
-       // resPage.
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLogin() {
+        loginVC.loginPresenter = LoginPresenter(view: loginVC)
+        loginVC.loginPresenter?.login(email: "", password: "tempPassword")
+        let errorMsg = loginVC.loginPresenter?.error
+        XCTAssertEqual(errorMsg, "Email field cannot be left blank")
+    }
+    
+    func testRegister() {
+        registerVC.registerPresenter = RegistrationPresenter(view: registerVC)
+        registerVC.registerPresenter?.register(email: "dayanny.caballero@gmail.com", password: "")
+        let errorMsg = registerVC.registerPresenter?.error
+        XCTAssertEqual(errorMsg, "Password field cannot be left blank")
     }
 }
