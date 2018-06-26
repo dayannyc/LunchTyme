@@ -10,7 +10,6 @@ import UIKit
 
 class RestaurantsViewController: UIViewController, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var bttnsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     var tempRestaurantArr = [Restaurant]()
     var allRestaurantArr = [Restaurant]()
@@ -18,9 +17,7 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
     var picker:UIPickerView = UIPickerView()
     var btnConfirm:UIButton = UIButton()
     var btnCancel:UIButton = UIButton()
-    var chosenCategory: String?
     var categories = [String]()
-    var category = "Everything"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +113,11 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
     
     
     @IBAction func resetBttn(_ sender: Any) {
+        tempRestaurantArr = allRestaurantArr
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+        print("RESET")
     }
     
     @objc func cancelBttn(sender: UIButton!) {
@@ -131,8 +133,8 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
         picker.isHidden = true
         
         let categoryIndex = picker.selectedRow(inComponent: 0)
-        category = categories[categoryIndex]
-        tempRestaurantArr = allRestaurantArr.filter({$0.category == self.category})
+        let category = categories[categoryIndex]
+        tempRestaurantArr = allRestaurantArr.filter({$0.category == category})
         
         DispatchQueue.main.async {
             self.collectionView.reloadData()

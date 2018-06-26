@@ -348,7 +348,6 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="categoryBttn:" destination="lMx-8B-ocY" eventType="touchUpInside" id="Kwa-Lx-l1B"/>
                                             <action selector="resetBttn:" destination="lMx-8B-ocY" eventType="touchUpInside" id="553-AY-OCu"/>
                                         </connections>
                                     </button>
@@ -399,7 +398,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bttnsView" destination="vF5-0h-KWf" id="Naw-Mx-Fmb"/>
                         <outlet property="collectionView" destination="cUZ-TZ-pFz" id="Bu1-Gp-IAi"/>
                     </connections>
                 </viewController>
@@ -586,6 +584,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qds-PU-0zi"/>
-        <segue reference="NfX-L8-RTm"/>
+        <segue reference="w5k-of-fOq"/>
     </inferredMetricsTieBreakers>
 </document>
