@@ -10,6 +10,7 @@ import UIKit
 
 class RestaurantsViewController: UIViewController, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var bttnsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     var tempRestaurantArr = [Restaurant]()
     var allRestaurantArr = [Restaurant]()
@@ -20,19 +21,9 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
     var chosenCategory: String?
     var categories = [String]()
     var category = "Everything"
-    @IBOutlet weak var resetBttn: UIButton!
-    @IBOutlet weak var categoryBttn: UIButton!
-    @IBOutlet weak var listBttn: UIButton!
-    @IBOutlet weak var gridBttn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bttnBorder(button:resetBttn)
-        bttnBorder(button:categoryBttn)
-        bttnBorder(button:listBttn)
-        bttnBorder(button:gridBttn)
-        
-        
         
 //        // parsing data from jSON url and store them in models
 //        let jsonURL = URL(string: "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/restaurants.json")
@@ -79,11 +70,6 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.dataSource = self
     }
     
-    func bttnBorder(button:UIButton) {
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.white.cgColor
-    }
-    
     @IBAction func categoryBttn(_ sender: Any) {
         btnConfirm.isHidden = false
         btnCancel.isHidden = false
@@ -115,16 +101,16 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
     
     func makePicker() {
         // instantiates UIPickerView
-       // picker.isHidden = true
+        picker.isHidden = true
         picker.dataSource = self
         picker.delegate = self
         self.view.addSubview(picker)
         self.picker.frame = CGRect(x: 0, y: view.frame.maxY/15, width: view.frame.width, height: view.frame.height/6)
         self.picker.backgroundColor = UIColor.white
-        self.picker.layer.borderColor = UIColor.black.cgColor
-        self.picker.layer.borderWidth = 1
+        self.picker.layer.borderColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0).cgColor
+        self.picker.layer.borderWidth = 0.70
         
-        makePickerButton(button:btnConfirm, xVal:view.frame.minX, btnColor:UIColor.blue, btnTitle:"Confirm", btnAc:#selector(confirmBttn))
+        makePickerButton(button:btnConfirm, xVal:view.frame.minX, btnColor:UIColor.black, btnTitle:"Confirm", btnAc:#selector(confirmBttn))
         makePickerButton(button:btnCancel, xVal:view.frame.width/2, btnColor:UIColor.red, btnTitle: "Cancel", btnAc:#selector(cancelBttn))
     }
     
@@ -151,7 +137,6 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
-        print("CATEGORY IS !!!!!! ", category)
     }
     
     // Returns number of columns
@@ -171,7 +156,7 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
     
     // creates a button inside of the picker
     func makePickerButton(button:UIButton, xVal:CGFloat, btnColor:UIColor, btnTitle:String, btnAc:Selector) {
-        button.isHidden = false
+        button.isHidden = true
         button.frame = CGRect(x: xVal, y: (view.frame.height/6)+45, width: view.frame.width/2, height: 25)
         button.backgroundColor = UIColor.white
         button.layer.borderWidth = 1

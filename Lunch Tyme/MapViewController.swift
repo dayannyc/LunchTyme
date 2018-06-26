@@ -26,6 +26,7 @@ class MapViewController: UIViewController {
         for currRestaurant in restaurantArr {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake((currRestaurant.location?.lat)!, (currRestaurant.location?.lng)!)
+            annotation.title = currRestaurant.name
             restaurantAnns.append(annotation)
         }
         restaurantMap.addAnnotations(restaurantAnns)
