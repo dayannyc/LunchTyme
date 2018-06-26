@@ -23,10 +23,13 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
         name.text = currRestaurant.name
         category.text = currRestaurant.category
         
+
         restaurantImg.image = nil
+
+        // image in cache already so just get it
         if cache.object(forKey: currRestaurant.name! as NSString) != nil {
             restaurantImg.image = cache.object(forKey: currRestaurant.name! as NSString)
-        } else {
+        } else { // get image from imageURL then store in cache
             let imageUrl:URL = URL(string: currRestaurant.backgroundImageURL!)!
             URLSession.shared.dataTask(with: imageUrl, completionHandler: { (data, response
                 , error) in
