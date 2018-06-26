@@ -23,6 +23,8 @@
 		8D98506120DD40F900F37598 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506020DD40F900F37598 /* LoginViewController.swift */; };
 		8D98506320DD410600F37598 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506220DD410600F37598 /* RegisterViewController.swift */; };
 		8D98506B20E12FAB00F37598 /* Lunch_TymeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D98506A20E12FAB00F37598 /* Lunch_TymeTests.swift */; };
+		8DD7D86F20E27AC9009E90FE /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7D86E20E27AC9009E90FE /* GridLayout.swift */; };
+		8DD7D87120E27E2D009E90FE /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7D87020E27E2D009E90FE /* ListLayout.swift */; };
 		98144BE3BDFF455D2809B9C2 /* libPods-Lunch TymeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B37058D849D1491491605C7A /* libPods-Lunch TymeTests.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		8D98506820E12FAA00F37598 /* Lunch TymeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lunch TymeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D98506A20E12FAB00F37598 /* Lunch_TymeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunch_TymeTests.swift; sourceTree = "<group>"; };
 		8D98506C20E12FAB00F37598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD7D86E20E27AC9009E90FE /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		8DD7D87020E27E2D009E90FE /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 		B37058D849D1491491605C7A /* libPods-Lunch TymeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lunch TymeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6DB1E1E3E8C56068EF7326 /* Pods-Lunch Tyme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch Tyme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lunch Tyme/Pods-Lunch Tyme.debug.xcconfig"; sourceTree = "<group>"; };
 		D1B6E89DAFF219308F34D913 /* Pods-Lunch TymeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lunch TymeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lunch TymeTests/Pods-Lunch TymeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				8D355B7C20CEF6D900A532EC /* AppDelegate.swift */,
 				8D98506020DD40F900F37598 /* LoginViewController.swift */,
 				8D98506220DD410600F37598 /* RegisterViewController.swift */,
+				8DD7D86E20E27AC9009E90FE /* GridLayout.swift */,
+				8DD7D87020E27E2D009E90FE /* ListLayout.swift */,
 				8D355B9420CF0F1100A532EC /* RestaurantsViewController.swift */,
 				8D355BD620D19FC400A532EC /* RestaurantCollectionViewCell.swift */,
 				8D355BDA20D1B32900A532EC /* Restaurants.swift */,
@@ -387,7 +393,9 @@
 				8D355B9720CF100300A532EC /* DetailsViewController.swift in Sources */,
 				8D355B9920D0075C00A532EC /* InternetViewController.swift in Sources */,
 				8D355BDB20D1B32900A532EC /* Restaurants.swift in Sources */,
+				8DD7D87120E27E2D009E90FE /* ListLayout.swift in Sources */,
 				8D355BDF20D3721200A532EC /* MapViewController.swift in Sources */,
+				8DD7D86F20E27AC9009E90FE /* GridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

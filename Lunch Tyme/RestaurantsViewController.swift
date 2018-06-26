@@ -19,8 +19,15 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
     var btnCancel:UIButton = UIButton()
     var categories = [String]()
     
+    var listLayout:ListLayout!
+    var gridLayout:GridLayout!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        listLayout = ListLayout()
+        gridLayout = GridLayout()
+        collectionView.collectionViewLayout = listLayout
         
 //        // parsing data from jSON url and store them in models
 //        let jsonURL = URL(string: "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/restaurants.json")
@@ -119,6 +126,20 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
         }
         print("RESET")
     }
+    @IBAction func gridBttn(_ sender: Any) {
+        UIView.animate(withDuration: 0.1) {
+            self.collectionView.collectionViewLayout.invalidateLayout()
+            self.collectionView.setCollectionViewLayout(self.gridLayout, animated: false)
+        }
+    }
+    
+    @IBAction func listBttn(_ sender: Any) {
+        UIView.animate(withDuration: 0.1) {
+            self.collectionView.collectionViewLayout.invalidateLayout()
+            self.collectionView.setCollectionViewLayout(self.listLayout, animated: false)
+        }
+    }
+    
     
     @objc func cancelBttn(sender: UIButton!) {
         btnConfirm.isHidden = true
@@ -174,18 +195,18 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
         super.didReceiveMemoryWarning()
     }
 
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return tempRestaurantArr.count
-    }
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return tempRestaurantArr.count
+//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantCollectionViewCell
-        cell.updateInfo(restaurantList: tempRestaurantArr, index: indexPath[0], cache:imageCache, imageUrl: tempRestaurantArr[indexPath[0]].backgroundImageURL)
+        cell.updateInfo(restaurantList: tempRestaurantArr, index: indexPath.item, cache:imageCache, imageUrl: tempRestaurantArr[indexPath.item].backgroundImageURL)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return tempRestaurantArr.count
     }
     
     @IBAction func logoutBttn(_ sender: Any) {
@@ -201,8 +222,9 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
             seg.restaurantArr = allRestaurantArr
         } else if segue.identifier == "listDetailsSeg" {
             let seg = segue.destination as! DetailsViewController
+            
             if let indexPath = self.collectionView.indexPathsForSelectedItems {
-                let index = indexPath[0][0]
+                let index = indexPath[0][1]
                 let currRestaurant = tempRestaurantArr[index]
                 seg.currRestaurant = currRestaurant
                 seg.restaurantArr = allRestaurantArr
