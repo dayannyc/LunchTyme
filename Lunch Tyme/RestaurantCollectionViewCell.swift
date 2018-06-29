@@ -16,10 +16,8 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
     var imageUrlString: String?
     
     // update cell information
-    func updateInfo(restaurantList:[Restaurant], index:Int, cache:NSCache<NSString, UIImage>, imageUrl: String?) {
-        imageUrlString = imageUrl
-        
-        let currRestaurant = restaurantList[index]
+    func updateInfo(currRestaurant:Restaurant, cache:NSCache<NSString, UIImage>) {
+        imageUrlString = currRestaurant.backgroundImageURL
         name.text = currRestaurant.name
         category.text = currRestaurant.category
         

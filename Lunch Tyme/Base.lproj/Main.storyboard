@@ -146,7 +146,7 @@
                                     <color key="titleColor" red="0.2627450980392157" green="0.90980392156862744" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="phoneButton:" destination="t5J-G9-IhZ" eventType="touchUpInside" id="ptn-lQ-F3p"/>
+                                    <action selector="phoneBttnClicked:" destination="t5J-G9-IhZ" eventType="touchUpInside" id="FAg-BV-2Kr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnl-Kx-Tdf">

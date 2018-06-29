@@ -68,7 +68,13 @@ class DetailsViewController: UIViewController {
             bttn.isHidden = true
         }
     }
-
+    
+    @IBAction func phoneBttnClicked(_ sender: Any) {
+        let phoneStr:String = (currRestaurant?.contact?.phone)!
+        let url = URL(string: "tel://\(phoneStr)")
+        UIApplication.shared.open(url!)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
