@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RestaurantsViewController: UIViewController, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -162,9 +163,15 @@ class RestaurantsViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     @IBAction func logoutBttn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialVC = storyboard.instantiateViewController(withIdentifier: "initialScreen") as! LoginViewController
-        self.present(initialVC, animated: true, completion: nil)
+        do {
+            try Auth.auth().signOut()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialVC = storyboard.instantiateViewController(withIdentifier: "initialScreen") as! LoginViewController
+            self.present(initialVC, animated: true, completion: nil)
+        } catch let signOutError as NSError  {
+            print ("Error signing out: %@", signOutError)
+        }
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

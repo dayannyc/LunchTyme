@@ -292,7 +292,6 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="0.70288461950000003" blue="0.31400646329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="LeR-fK-nFn" firstAttribute="top" secondItem="3tB-hr-o1I" secondAttribute="top" id="AY8-58-hYP"/>
                                             <constraint firstItem="SyR-xP-Qn5" firstAttribute="top" secondItem="3tB-hr-o1I" secondAttribute="top" id="AeT-7Q-kVU"/>
@@ -608,7 +607,7 @@
         <image name="tab_lunch" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HNy-iL-0zP"/>
+        <segue reference="qds-PU-0zi"/>
         <segue reference="w5k-of-fOq"/>
     </inferredMetricsTieBreakers>
 </document>

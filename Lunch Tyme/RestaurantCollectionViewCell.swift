@@ -20,8 +20,6 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
         imageUrlString = currRestaurant.backgroundImageURL
         name.text = currRestaurant.name
         category.text = currRestaurant.category
-        
-
         restaurantImg.image = nil
 
         // image in cache already so just get it
@@ -44,11 +42,8 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
                             // Store the image in to our cache
                             cache.setObject(image!, forKey: currRestaurant.name! as NSString)
                         }
-
-
                     }
             }).resume()
-
         }
     }
 }
