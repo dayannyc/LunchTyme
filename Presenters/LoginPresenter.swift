@@ -10,6 +10,7 @@ import Foundation
 import FirebaseAuth
 
 class LoginPresenter {
+    
     private var loginView: LoginViewController?
     var error = ""
     
@@ -29,8 +30,17 @@ class LoginPresenter {
                 let sVC = storyboard.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
                 self.loginView?.present(sVC!, animated: true, completion: nil)
             } else {
-                print("Error occured while logging in")
+                // error signing in
+                self.addAlert(errorMsg: (error?.localizedDescription)!)
             }
         }
+    }
+    
+    // adds alert controller displaying error from firebase
+    func addAlert(errorMsg: String) {
+        loginView?.alertController = UIAlertController(title: "Error", message: errorMsg, preferredStyle: UIAlertControllerStyle.alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        loginView?.alertController!.addAction(OKAction)
+        loginView?.present((loginView?.alertController)!, animated: true, completion:nil)
     }
 }

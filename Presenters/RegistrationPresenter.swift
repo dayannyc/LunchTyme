@@ -10,6 +10,7 @@ import Foundation
 import FirebaseAuth
 
 class RegistrationPresenter {
+    
     private var registrationView: RegisterViewController?
     var error = ""
     
@@ -32,11 +33,21 @@ class RegistrationPresenter {
                     let sVC = storyboard.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
                     self.registrationView?.present(sVC!, animated: true, completion: nil)
                 } else {
-                    //add message to user
+                    // error when signing in
+                    self.addAlert(errorMsg: (error?.localizedDescription)!)
                 }
+            } else {
+                // error when signing up
+                self.addAlert(errorMsg: (error?.localizedDescription)!)
             }
-            // else add message to user stating they didn't
-            // register correctly
         }
+    }
+    
+    // adds alert controller displaying error from firebase
+    func addAlert(errorMsg: String) {
+        registrationView?.alertController = UIAlertController(title: "Error", message: errorMsg, preferredStyle: UIAlertControllerStyle.alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        registrationView?.alertController!.addAction(OKAction)
+        registrationView?.present((registrationView?.alertController)!, animated: true, completion:nil)
     }
 }
